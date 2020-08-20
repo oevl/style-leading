@@ -4,20 +4,21 @@
 
 - Uso Source de Unsplash para traer imagenes de baterias
 
-- Código para detectar presión/soltar tecla.
-
-- El sitio keycode.io del tutorial no sirve.
-
-- Las teclas deben estar en mayuscula? (NO)
-
 - Solo usando la documentación de Devdocs.io y MDN
+  - Código para detectar presión/soltar tecla.
 
-- https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent
+    - El sitio keycode.io del tutorial no sirve.
 
-- https://devdocs.io/dom/globaleventhandlers/onkeypress
+    - Las teclas deben estar en mayuscula? (NO)
 
-- https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onkeyup
+    - https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent
 
-- Código para emitir sonido.
+    - https://devdocs.io/dom/globaleventhandlers/onkeypress
 
-- Audio()
+    - https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onkeyup
+
+    - Código para emitir sonido.
+
+      - Audio()
+
+      - [https://devdocs.io/html/element/audio](https://devdocs.io/html/element/audio)
