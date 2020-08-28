@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>JS + CSS Clock</title>
+  <link rel="icon" 
+      type="image/png" 
+      href="favicon.ico">
 </head>
-<body>
+<body onload="initClock()">
 
 
     <div class="clock">
@@ -18,7 +21,8 @@
 
   <style>
     html {
-      background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5);
+      /* background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5); */
+      background-color: aquamarine;
       background-size: cover;
       font-family: 'helvetica neue';
       text-align: center;
@@ -67,8 +71,29 @@
   </style>
 
   <script>
+    let deg = 0;
+    const hourHand = document.querySelector("div.hand.hour-hand");
+    const minuteHand = document.querySelector("div.hand.min-hand");
+    const secondHand = document.querySelector("div.hand.second-hand");
 
+    function initClock() {
+      start = new Date();
+      startHour = start.getHours(); /* 0 - 23 */
+      startMinutes = start.getMinutes(); /* 0 - 59 */
+      startSeconds = start.getSeconds(); /* 0 - 59 */
+      interval = window.setInterval(moveHand, 1000);
+      hourHand.style.background="green";
+      minuteHand.style.background="yellow";
+      secondHand.style.background="red";
+      secondHand.style.transformOrigin="right center";
+      secondHand.style.transform='rotate(90deg)';
 
+    }
+
+    function moveHand() {
+      deg += 1
+      secondHand.style.transform='rotate('+90+deg+'deg)';
+    };
   </script>
 </body>
 </html>
